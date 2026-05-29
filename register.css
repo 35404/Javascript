@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: #fdf6ec;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 顶部渐变 */
+.header {
+  height: 180px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #c0392b, #f0932b, #d63031);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  color: #fdf6ec;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+
+.header p {
+  font-size: 0.9em;
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 表单卡片 */
+.form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.form-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
+  padding: 40px 36px;
+}
+
+.form-card h3 {
+  text-align: center;
+  color: #c0392b;
+  font-size: 1.6em;
+  margin-bottom: 28px;
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  font-family: inherit;
+  color: #333;
+  background: #fafafa;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+  background: #fff;
+}
+
+.form-group .input-icon {
+  position: absolute;
+  right: 14px;
+  top: 38px;
+  color: #bbb;
+  font-size: 1.1em;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.form-group input:focus~.input-icon {
+  color: #c0392b;
+}
+
+/* 提交按钮 */
+.btn-submit {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* 底部切换链接 */
+.form-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.form-switch a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.form-switch a:hover {
+  color: #e74c3c;
+}
+
+/* 提示信息 */
+.form-tip {
+  text-align: center;
+  font-size: 0.8em;
+  color: #bbb;
+  margin-top: 6px;
+}
+
+/* 消息提示 */
+.toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  padding: 12px 28px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95em;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast.success {
+  background: #27ae60;
+}
+
+.toast.error {
+  background: #e74c3c;
+}
+
+/* 页脚 */
+.page-footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.85em;
+}
+
+.footer-sub {
+  margin-top: 4px;
+  font-size: 0.8em;
+  color: #999;
+}

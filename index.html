@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="index.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中华菜馆</title>
+</head>
+<style>
+ 
+</style>
+<body>
+  <div class="box-top floor" id="home">
+    <h2>欢迎来到中华菜馆</h2>
+    <h4>探索中华美食的无限魅力 · 品味舌尖上的中国</h4>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="head-top">
+    <a >特色菜系</a>
+    <a >菜单</a>
+    <a>酒桌预定</a>
+    <a >订单</a>
+    <a>关于我们</a>
+    <a class="login" id="login">登录</a>
+  </nav>
+
+
+    <!-- 遮罩 -->
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast"></div>
+
+  <!-- 酒桌模态框 -->
+  <div class="modal" id="modal-1">
+    <h3>酒桌预定</h3>
+    <form id="reserveForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="sum">就餐人数</label>
+          <input type="number" id="sum" name="sum" min="1" max="50" placeholder="请输入人数">
+        </div>
+        <div class="form-group">
+          <label for="num">预定桌数</label>
+          <input type="number" id="num" name="num" min="1" max="10" placeholder="请输入桌数">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="size">桌型选择</label>
+          <select id="size" name="size">
+            <option value="">请选择</option>
+            <option value="2">2 人桌</option>
+            <option value="4">4 人桌</option>
+            <option value="5">5 人桌</option>
+            <option value="8">8 人桌</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">预定日期</label>
+          <input type="date" id="date" name="date">
+        </div>
+      </div>
+    </form>
+     <div class="btn-row">
+      <button class="btn-cancel" id="closeModal-1">取 消</button>
+      <button class="btn-submit" id="submitForm">确 认</button>
+    </div>
+  </div>
+   <div class="modal" id="modal-2">
+  
+   
+  </div>
+  
+
+
+  <!-- 标题1 -->
+  <h2 class="head-title" id="featured">🌶️招牌特色菜🌶️</h2>
+  <!-- 轮播 -->
+  <div class="slider floor">
+    <h2 class="txt">1111</h2>
+    <div class="slider-footer">
+      <ul class="slider-indicator">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="toggle">
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </div>
+
+  <!-- 标题2 -->
+  <h2 class="head-title" id="menu">🌶️菜单🌶️</h2>
+  <!-- 菜单 -->
+  <div class="tab-container floor">
+    <div class="tab-nav">
+      <button class="active" data-index="0">推荐菜品</button>
+      <button data-index="1">家常小炒</button>
+      <button data-index="2">热门必点</button>
+      <button data-index="3">酒水饮料</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active">
+        <div class="box-big">
+          <div class="box-img"></div>
+          <div class="box-txt">文字</div>
+        </div>
+      </div>
+      <div class="tab-pane">
+        <div class="box-big">
+          <div class="box-img"></div>
+          <div class="box-txt">文字</div>
+        </div>
+      </div>
+      <div class="tab-pane">
+        <div class="box-big">
+          <div class="box-img"></div>
+          <div class="box-txt">文字</div>
+        </div>
+      </div>
+      <div class="tab-pane">
+        <div class="box-big">
+          <div class="box-img"></div>
+          <div class="box-txt">文字</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 评论区 -->
+  <h2 class="head-title" id="comment">&#127858; 食客评价 &#127858;</h2>
+  <div class="comment-section floor">
+    <div class="comment-form">
+      <input type="text" id="commentUser" placeholder="你的昵称" autocomplete="off">
+      <textarea id="commentText" rows="3" placeholder="分享你的美食体验..."></textarea>
+      <button id="commentSubmit">发 表</button>
+    </div>
+    <div class="comment-list" id="commentList"></div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="page-footer floor" id="about">
+    <p>中华菜馆 &copy; 2026</p>
+    <p class="footer-sub">传承经典味道 · 品味中华美食</p>
+  </footer>
+
+  <!-- 电梯导航 -->
+  <nav class="elevator">
+    <a href="#home" class="elevator-item active" data-target="home">首页</a>
+    <a href="#featured" class="elevator-item" data-target="featured">招牌菜</a>
+    <a href="#menu" class="elevator-item" data-target="menu">菜单</a>
+    <a href="#about" class="elevator-item" data-target="comment">评论</a>
+  </nav>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
